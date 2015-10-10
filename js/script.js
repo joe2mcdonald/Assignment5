@@ -506,11 +506,12 @@ Recipe.prototype.displayInfo =  function()
 };	
 	
 var Guacamole = new Recipe ("Guacamole", 9, ["3 Alvacados", "2 Lime", "1 Teaspoon Salt", "1/2 Cup Onion", "3 Tabelspoons Cilantro",  "2 Diced Tomatoes", "1 Teaspoon Garlic", "1 Pinch Ground Pepper" ] );	
+
 Guacamole.displayInfo( );
 	
-var Guacamole = new Recipe ("Pizza", 15, ["10 tomatoes", "2 Mushrooms", "1 Teaspoon Salt", "1/2 Cup Onion", "3 Peppers",  "2 Cups Olives", "1 Teaspoon Garlic", "1 Pinch Ground Pepper","5 slices peperoni", "5 cups cheese", "4 cups flour" , "1 cup yeast" , "1/2 cup oil"   ] );	
+var Pizza = new Recipe ("Pizza", 15, ["10 tomatoes", "2 Mushrooms", "1 Teaspoon Salt", "1/2 Cup Onion", "3 Peppers",  "2 Cups Olives", "1 Teaspoon Garlic", "1 Pinch Ground Pepper","5 slices peperoni", "5 cups cheese", "4 cups flour" , "1 cup yeast" , "1/2 cup oil"   ] );	
 
-Guacamole.displayInfo();
+Pizza.displayInfo();
 
 */
 
