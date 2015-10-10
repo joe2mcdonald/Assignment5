@@ -537,21 +537,52 @@ console.log("\n\n----------      READING LIST           -----------");
 //  ----------------------------------------------------------------------------------------
 console.log("\n\n----------      BLANKS           -----------");
 
+/*  ----------------------------- BEGINNING OF MULTILINE COMMENT ----------------------
 
+(function()  {
+    var person = function ( first, last, age, eyecolor) {     // anonymous class
+    	this._firstName = first;
+		this._lastName = last;
+		this._age = age;
+		this._eyeColor = eyecolor;
+        person.buy = function (car) {
+	      console.log("I'm rich - so I will buy the Car Make:  " + car._make ) ;
+          return this._firstName + " " + this._lastName;
+	       };
+    };
+//-----
+    var car = function(make, model, doors, miles, price) {		// anonymous class
+        this._make = make;
+		this._model = model;
+		this._doors = doors;
+		this._miles = miles;
+		this._price = price;
+        car.drive = function(miles) {		// totals the driven miles 
+		    this._miles += miles;
+		    return this;
+		};	
+		car.getPrice = function() {
+			this._price = price;
+			console.log("CAR PRICE a  " + this._price);
+			return price;
+		};
+	};
+//-----	
+var John = new person("John", "Doe", 50, "blue");	// instance of the person class
+var Sally = new person("Sally", "Rally", 48, "green"); // instance of the person class
+var myCar = new car("Chevy", "Impalla", 4, 20000, 300000);  // instance of the car clas	
+	
+// print vroom vroom
+car.drive();	
+	console.log("VROOM VROOM" +  " & the miles are "  + myCar._miles	);
+	
+car.getPrice();	
+    // print 'I'm rich'
+    if (myCar._price > 100000) { 
+		console.log(myCar._price  + " car price is greater ");
+        person.buy(myCar);
+    }
+}());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
