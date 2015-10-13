@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Assignment2   - Joe McDonald - OCTOBER 2015 </title>
+	<title>Assignment5   - Joe McDonald - OCTOBER 2015 </title>
 	<meta name="description" content="CONTACT US">
 	<meta name="author" content="JOSEPH MCDONALD">
 	
@@ -37,7 +37,7 @@
 	<br>
 	<br>
 	<center>
-	<p><strong>             FEWD II - ASSIGNMENT  4 -  JOE MCDONALD  OCTOBER 7 2015	                  </strong></p>
+	<p><strong>             FEWD II - ASSIGNMENT  5 -  JOE MCDONALD  OCTOBER 12 2015	                  </strong></p>
 		<br>
 	<p><strong>    YOU WILL NOT SEE THE CONSOLE.LOG AND ALERT MESSAGES FROM THE SCRIPT.JS FILE   	 </strong></p>
 	<p><strong>           -  STEPS ARE  COMMENTED OUT  USING A MULTILINE COMMENT                        <p>
@@ -49,6 +49,238 @@
      	
 	</strong></p>		
      </center>
+	
+
+<br>
+<!--      ============    MULTI LINE COMMENT ==     1   --> 
+<button onclick="writeMessage()">Click Me 1 </button>
+
+<br>																																	
+<br>
+<br>	
+
+<!--      ============    MULTI LINE COMMENT ==      2  -->  
+
+  
+<button id="myButton2" onclick="myFunction()">Click Me 2 </button>	
+
+
+<br>																																	
+<br>
+<br>	
+				
+																	
+<!--      ============    MULTI LINE COMMENT ==  	3									
+-->
+
+<button id="myButton3">Click Me 3 </button>
+
+<script>
+					                                   // USER DEFINED FUNCTION
+myButton3.addEventListener("click", writeMessage3, false);
+function writeMessage3() {	
+	alert("I have been clicked 3 a");
+}
+
+					                                    // CALL BACK FUNCTION 
+myButton3.addEventListener("click", function() {alert("I have been clicked 3 b"); }, false);												
+</script>																								
+
+<br>																																	
+<br>
+<br>																																																																											
+																																									
+<!--      ============    MULTI LINE COMMENT ==  	3									
+																										
+<script>
+	document.addEventListener("DOMContentLoaded", init, false);
+	
+	function init() {
+		myButton.addEventListener("click", writeMessage3, false);
+	}
+	function writeMessage3() {
+		alert("I have been clicked 3 b");
+			
+	}
+</script>
+<input id="myButton" type="button" value="Click Me 3 ">																								
+
+<br>																																	
+<br>
+<br>																																			>
+																						
+ -->
+	
+
+																												
+<!--      ============    MULTI LINE COMMENT ==    4 	// CALL BACK FUNCTION 								
+--> 																																			
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {							   
+		myButton4.addEventListener("click", function(){alert("I have been clicked 4");}, false);
+	}												 // CALL BACK FUNCTION 
+	
+</script>
+<input id="myButton4" type="button" value="Click Me 4 ">																								
+
+<br>																																	
+<br>
+<br>																																																																								
+																				
+																	
+<!--      ============    MULTI LINE COMMENT ==  	5	//  ALLOWS YOU TO WRITE IN <HEAD> 								
+-->
+												
+<script>
+	document.addEventListener("DOMContentLoaded", init, false); //ALLOWS YOU TO WRITE IN <HEAD> 
+	
+	function init() {
+		myButton.addEventListener("click", writeMessage5, false);
+	}
+	function writeMessage5() {
+		alert("I have been clicked 5");
+	}
+</script>
+
+<input id="myButton" type="button" value="Click Me 5 ">																								
+
+<br>																																	
+<br>
+<br>>																																																											
+																										
+																		
+<!--      ============    MULTI LINE COMMENT ==  6  LOCATION OBJECT   										
+																			
+	//					DOESN'T WORK ALERT DISPLAYS BUT PAGE REDIRECTS TO GOOGLE	
+--> 
+
+																																										
+<a href="http://www.Google.com" id="redirect" >  Visit Google 6 </a>																										
+
+<script>
+//	document.addEventListener("DOMContentLoaded", init, false); //ALLOWS YOU TO WRITE IN <HEAD> 
+//	function init() {
+		redirect.addEventListener("click", writeMessage6, false);
+	//        }
+	        function writeMessage6() {
+	       
+				//  location.reload();
+				// window.location.href = window.location.href;
+				//  location = location;
+				document.location.reload(true);
+				alert("You have clicked on the Google link but not redirected  6 ");
+				
+	         }						
+</script>																																																																							
+
+<br>																																	
+<br>
+<br>																																																																										
+																		
+<!--      ============    MULTI LINE COMMENT ==    7   BUTTON  TEXTBOX 										
+--> 
+<input type="text" name="textbox" id="textbox7"  placeholder="Enter message here" >
+	<br>
+ <input id="myButton7" type="button" value="Click Me 7 ">	
+																				
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+		var box = document.getElementById("textbox7");
+		myButton7.addEventListener("click", writeMessage7, false); // CALL BACK FUNCTION 
+		function writeMessage7() {
+		    alert(box.value);
+	        var btnPlay = document.getElementById("myButton7");
+            btnPlay.disabled = true;
+		    }	
+      }
+		
+</script>							
+		
+<br>																																	
+<br>
+<br>																																																																													
+														
+																		
+<!--      ============    MULTI LINE COMMENT ==  8 A  BUTTON NEWPAGE										
+--> 
+	
+<input id="myButton8" type="button" value="Click Me 8 A ">
+	
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+		myButton8.addEventListener("click", newPagePop8, false); // CALL BACK FUNCTION 
+		function newPagePop8() {
+		    alert("new page pop up ");
+		    window.open('newpage.html','gg','width=300,height=300,resizable=yes');
+
+		    }	
+      }
+		
+</script>										
+<br>																																	
+<br>
+<br>					
+																		
+<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTON	-->									
+
+<input id="myButton9A" type="button" value="Start 9 A ">
+ 
+	
+<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTON	--> 
+				
+	<input id="myButton9B" type="button" value="Stop 9 B ">	
+
+
+
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+<!--      ============    MULTI LINE COMMENT ==		--> 
+		
+		myButton9A.addEventListener("click", setInter(), false); 
+		 var id;
+		function setInter() {
+		    
+		    id = setInterval(alertFunc, 2000);
+		}
+		altertFunc() {   
+		     alert("LEARNING JAVAsCRIPT IS FUN! ");}	
+		
+     }
+	
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {	
+	  myButton9B.addEventListener("click", clearInterval, false);
+		function StopFunction() {
+		   	
+		    clearInterval(id);
+			
+			altertFuncStop() {   
+		      alert(" STOP LOGGING THE TEXT");}
+		}
+		
+		}
+		
+		
+	</script>										
+<br>			
+		
+		
+<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTON										
+ 
+	    
+				
+		
+      }
+--> 	
+																															
+<br>
+<br>					
+																																					
+																																														
 	
 </main>
  
