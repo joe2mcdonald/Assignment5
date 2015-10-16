@@ -6,42 +6,34 @@
 <title>Assignment 5, Part 2 - Calculator  | JOSEPH MCDONALD </title>
 
 <script>
-
 window.addEventListener("load", init, false);      
 	function init() 
 	{
 		
-	function enter(evt) {
-		var val = evt.target.value;
-		if (val == "+" || val == "-" || val == "/" || val =="*" ) {
-			result.value += " " + val + " " ;
-		     }
-			else if (val == "=") {
-				calculate();
-			}
-				else if (val == "delete") {
-					del();
-			   }
-				else {
-					result.value += val;
-				}
-			}
-	
-	function calculate () {
+	function enter(event)
+		{
+		var val = event.target.value;
+	   if (val == "+" || val == "-" || val == "/" || val =="*" ) 
+	   {  result.value += " " + val + " " ;  }
+		else if (val == "=") 
+		{calculate();}
+			else if (val == "delete")
+			{del();}
+			else 
+			{result.value += val;}
+		}
+	function del() 
+		{ document.getElementById("result").value = " "; }
+	function calculate () 
+		{
 		var opnum = document.getElementById("result");
 		var ans = eval (opnum.value);
 		document.getElementById("result").value = ans;
-				}
-								
-    function del() {
-		document.getElementById("result").value = " ";
 		}
-	
 	group.addEventListener("click", enter, false);	
 	}
 	
-	/*
-	        
+/*
 one.addEventListener("click", function() { enter(this.value) }, false);
 two.addEventListener("click", function() { enter(this.value) }, false);
 three.addEventListener("click", function() {enter(this.value)}, false);
@@ -54,7 +46,7 @@ nine.addEventListener("click", function() {enter(this.value)}, false);
 zero.addEventListener("click", function() {enter(this.value)}, false);
 add.addEventListener("click", function() {enter(this.value)}, false);
 subtract.addEventListener("click", function() {enter(this.value)}, false);
-nultiply.addEventListener("click", function() {enter(this.value)}, false);
+multiply.addEventListener("click", function() {enter(this.value)}, false);
 period.addEventListener("click", function() {enter(this.value) }, false);
 divideaddEventListener("click", function() {enter(this.value)}, false);
 equal.addEventListener("click", calculate, false);
