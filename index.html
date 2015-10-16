@@ -147,36 +147,23 @@ myButton3.addEventListener("click", function() {alert("I have been clicked 3 b")
 
 <br>																																	
 <br>
-<br>>																																																											
+<br>																																																											
 																										
 																		
-<!--      ============    MULTI LINE COMMENT ==  6  LOCATION OBJECT   										
-																			
-	//					DOESN'T WORK ALERT DISPLAYS BUT PAGE REDIRECTS TO GOOGLE	
---> 
+<!--      ============    MULTI LINE COMMENT ==  6  GOOGLE REDIRECT PREVENTDEFAULT    -->															
+ <a href="http://www.Google.com" id="redirect">  Visit Google 6 </a>
+<script>																								   
+	redirect.addEventListener("click", function(event) { 
+		alert("You have clicked on the Google link but not redirected  6 ");	
+   		  event.preventDefault();
+			});
+		
+</script>		
+	   																						   																									   																									     																																		
 
-																																										
-<a href="http://www.Google.com" id="redirect" >  Visit Google 6 </a>																										
-
-<script>
-//	document.addEventListener("DOMContentLoaded", init, false); //ALLOWS YOU TO WRITE IN <HEAD> 
-//	function init() {
-		redirect.addEventListener("click", writeMessage6, false);
-	//        }
-	        function writeMessage6() {
-	       
-				//  location.reload();
-				// window.location.href = window.location.href;
-				//  location = location;
-				document.location.reload(true);
-				alert("You have clicked on the Google link but not redirected  6 ");
-				
-	         }						
-</script>																																																																							
-
-<br>																																	
+<br>	
 <br>
-<br>																																																																										
+<br>	
 																		
 <!--      ============    MULTI LINE COMMENT ==    7   BUTTON  TEXTBOX 										
 --> 
@@ -223,64 +210,70 @@ myButton3.addEventListener("click", function() {alert("I have been clicked 3 b")
 <br>																																	
 <br>
 <br>					
-																		
-<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTON	-->									
+					
+<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTONS	--> 
 
-<input id="myButton9A" type="button" value="Start 9 A ">
- 
-	
-<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTON	--> 
-				
-	<input id="myButton9B" type="button" value="Stop 9 B ">	
-
-
-
+<input id="myButton9A" type="button" value="START 9 A ">
+<input id="myButton9B" type="button" value="STOP 9 B ">	
 <script>
 	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
 	function init() {
-<!--      ============    MULTI LINE COMMENT ==		--> 
-		
-		myButton9A.addEventListener("click", setInter(), false); 
-		 var id;
-		function setInter() {
-		    
-		    id = setInterval(alertFunc, 2000);
-		}
-		altertFunc() {   
-		     alert("LEARNING JAVAsCRIPT IS FUN! ");}	
-		
-     }
 	
-	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
-	function init() {	
-	  myButton9B.addEventListener("click", clearInterval, false);
-		function StopFunction() {
-		   	
-		    clearInterval(id);
-			
-			altertFuncStop() {   
-		      alert(" STOP LOGGING THE TEXT");}
+	    myButton9A.addEventListener("click", setInter, false); 
+		var id;
+		function setInter() {
+		   id = setInterval(function() {alert("LEARNING JAVAsCRIPT IS FUN! ");}, 2000);
 		}
 		
+	    myButton9B.addEventListener("click", stopInterval, false);
+		function stopInterval() {
+		   clearInterval(id);
+		   alert(" STOPPED LOGGING THE TEXT");
 		}
-		
-		
-	</script>										
+	   }
+	
+</script>										
+<br>																																	
+<br>
 <br>			
 		
 		
-<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTON										
- 
-	    
-				
+<!--      ============    MULTI LINE COMMENT ==  10  DROP DOWN LIST	--> 
+
+
+
+
+<label>Choose a pet from this list:</label>
+ <select id="pets" size="4">
+  <option value="cat">Cat</option>
+  <option value="dog">Dog</option>
+  <option value="goldfish">Goldfish</option>
+  <option value="turtle">Turtle</option>
+</select> 
+
+<p>Click the button to show selected item in alert box.						
+<input id="myButton10" type="button" value="SELECT 10"></p>	
+
+  <script>
+    window.addEventListener("load", init, false);                 //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+	    var pet = document.getElementById("pets");
+		myButton10.addEventListener("click", writeMessage10, false); // CALL BACK FUNCTION 
+		function writeMessage10() {
+		    alert(pet.value);
+		    }	
+      }	
 		
-      }
---> 	
+  </script>  
 																															
 <br>
 <br>					
-																																					
-																																														
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br>																																																																							<label>Choose a pet from this list:
+<input list="pets" name="myPet" id="petlist"/></label>			
 	
 </main>
  
