@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Assignment 5, Part 2 - Calculator  | JOSEPH MCDONALD </title>
+
+<script>
+
+window.addEventListener("load", init, false);      
+	function init() 
+	{
+		
+	function enter(evt) {
+		var val = evt.target.value;
+		if (val == "+" || val == "-" || val == "/" || val =="*" ) {
+			result.value += " " + val + " " ;
+		     }
+			else if (val == "=") {
+				calculate();
+			}
+				else if (val == "delete") {
+					del();
+			   }
+				else {
+					result.value += val;
+				}
+			}
+	
+	function calculate () {
+		var opnum = document.getElementById("result");
+		var ans = eval (opnum.value);
+		document.getElementById("result").value = ans;
+				}
+								
+    function del() {
+		document.getElementById("result").value = " ";
+		}
+	
+	group.addEventListener("click", enter, false);	
+	}
+	
+	/*
+	var one = document.getElementById("one");
+	var two = document.getElementById("two");
+		var three= document.getElementById("three");
+		var four = document.getElementById("four");
+		var five= document.getElementById("five");
+		var six = document.getElementById("six");
+		var seven = document.getElementById("seven");
+		var eight = document.getElementById("eight");	
+	var nine = document.getElementById("nine");
+		var zero = document.getElementById("zero");
+		var add = document.getElementById("add");	
+	var subtract = document.getElementById("subtract");
+		var divide = document.getElementById("divide");
+	
+		var multiply = document.getElementById("multiply");
+		var equal = document.getElementById("equal");
+		var clear = document.getElementById("one");
+		var period = document.getElementById("period");
+		var result = document.getElementById("result");
+	
+	*/
+	
+	</script>
+
+</head>
+
+<body>
+<div id="group">
+	<input type="text" readonly id="result">
+    <br>
+    <input type="button" id="seven" value="7">
+    <input type="button" id="eight" value="8">
+    <input type="button" id="nine" value="9">
+    <input type="button" id="divide" value="/">
+    <br>
+    <input type="button" id="four" value="4">
+    <input type="button" id="five" value="5">
+    <input type="button" id="six" value="6">
+    <input type="button" id="multiply" value="*">
+    <br>
+    <input type="button" id="one" value="1">
+    <input type="button" id="two" value="2">
+    <input type="button" id="three" value="3">
+    <input type="button" id="subtract" value="-">
+    <br>
+    <input type="button" id="zero" value="0">
+    <input type="button" id="period" value=".">
+    <input type="button" id="add" value="+">
+    <input type="button" id="equal" value="=">
+    <br>
+    <input type="button" id="delete" value="delete">
+</div>    
+    
+     
+    
+</body>
+</html>
