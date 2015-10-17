@@ -6,35 +6,42 @@
 <title>Assignment 5, Part 2 - Calculator  | JOSEPH MCDONALD </title>
 
 <script>
+	
+	
+//  ----------------------------------------------------------------------------------------
+//  -------------------------------- PART 2 THE CALCULATOR II                 -------------
+console.log("\n\n----------          PART 2 THE CALCULATOR II            ----------");	
+//  ----------------------------------------------------------------------------------------	
+	
 window.addEventListener("load", init, false);      
-	function init() 
+	function init() 								// USER DEFINED FUNCTION 
 	{
 		
 	function enter(event)
 		{
 		var val = event.target.value;
 	   if (val == "+" || val == "-" || val == "/" || val =="*" ) 
-	   {  result.value += " " + val + " " ;  }
+	   {  result.value += " " + val + " " ;  }			// ADDED OPERATOR TO THE RESULT BOX 
 		else if (val == "=") 
-		{calculate();}
-			else if (val == "delete")
+		{calculate();}										// USER DEFINED CALCULATE FUNCTION
+			else if (val == "delete")						// REMOVE THE INFO IN THE RESULT BOX
 			{del();}
 			else 
-			{result.value += val;}
+			{result.value += val;}							// ADDS THE VALUE INTO THE RESULT BOX
 		}
 	function del() 
 		{ document.getElementById("result").value = " "; }
 	function calculate () 
 		{
-		var opnum = document.getElementById("result");
-		var ans = eval (opnum.value);
+		var opnum = document.getElementById("result");      // GET THE INFO IN THE RESULT BOX 
+		var ans = eval (opnum.value);				// PERFORMS THE CALULATION OF THE RESULTS WITH THE EVAL FUNTION
 		document.getElementById("result").value = ans;
 		}
-	group.addEventListener("click", enter, false);	
+	group.addEventListener("click", enter, false);	            // EVENT LISTENER 
 	}
 	
 /*
-one.addEventListener("click", function() { enter(this.value) }, false);
+one.addEventListener("click", function() { enter(this.value) }, false);   	// EVENTLISTENER FOR EACH BUTTON
 two.addEventListener("click", function() { enter(this.value) }, false);
 three.addEventListener("click", function() {enter(this.value)}, false);
 four.addEventListener("click", function() {enter(this.value)}, false);
@@ -57,7 +64,7 @@ delete.addEventListener("click", del, false);
 </head>
 
 <body>
-<div id="group">
+<div id="group">									<!-- DIV FOR THE ELEMENTS - RESULT TXT BOX AND BUTTONS -->
 	<input type="text" readonly id="result">
     <br>
     <input type="button" id="seven" value="7">

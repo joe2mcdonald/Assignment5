@@ -6,16 +6,19 @@
 	<meta name="description" content="CONTACT US">
 	<meta name="author" content="JOSEPH MCDONALD">
   
-  <!-- CSS    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-   <!-- 
-   <link rel="stylesheet" href="css/normalize.css">
-   
-  <link rel="stylesheet" href="css/styles.css">
-   -->
-<!--      ============     JAVASCRIPT SHEET        =======================       --> 
+<!--      ============     JAVASCRIPT       =======================       --> 
+
+
 
 
 <script>
+
+		
+/* ----------------     REMOVE THE NEXT COMMENT LINE TO RUN THE PROGRAM  -------------  */
+	
+/* ----------------          MULTI LINE COMMENT BEGINNING           -------------
+	
+	
 //02: Helper function to retrienve the ID of each image
 
 //03: Rollover function that performs the rollover effect on each image
@@ -29,30 +32,88 @@
     //09, 10, 11: Attach onmouseover and onmouseout event handlers to target.image property
 
 //12, 13: Event handler to create 5 new Rollover objects once the page loads
+	
+	
+	
+//  ----------------------------------------------------------------------------------------
+//  --------------------------------      STEP 12 WINDOW LOADING EVENT HANDLER -------------
+console.log("\n\n----------  Part 3 STEP 12   WINDOW LOADING EVENT HANDLER  ----------");	
+//  ----------------------------------------------------------------------------------------
 
-	
-	
-	
-	
-getImage(image) {
-return document.getElementById("image");	
-};
-	
+window.addEventListener("load", init, false);      
+	function init() 
+	{	
 
+//  ----------------------------------------------------------------------------------------
+//  --------------------------------      STEP 2     GET THE IMAGE ID		  -------------
+console.log("\n\n----------  Part 3 STEP 2    		GET THE IMAGE ID	    ---------");	
+//  -------------------------------------------------------------------------------------
+		
+function getImage(id) {
+	return document.getElementById(id);	
+    };
+
+//  ----------------------------------------------------------------------------------------
+//  --------------------------------      STEP 3  4   5 6   7 8                  -------------
+console.log("\n\n----------  Part 3 STEP 3   4  5 	6	7 8	9 10 11 				 -----------");	
+//  ----------------------------------------------------------------------------------------
+function Rollover(imageId, newImageURL)  {					// CONSTRUCTOR FUNCTION
+													// swaps out the image when you hover over it
+	var target = this;
+	this.image = getImage(imageId);
+	this.imageId = imageId;
+	this.newImageURL = newImageURL;
+    this.oldImageURL = this.image.src; 
+
+//  ----------------------------------------------------------------------------------------
+//  --------------------------------  STEP 09, 10, 11 
+//  ------- Attach onmouseover and onmouseout event handlers to target.image property -------------
+console.log("\n\n----------  Part 3 STEP 09, 10, 11      				 -----------");	
+//  ----------------------------------------------------------------------------------------
+	target.image.onmouseover = function() {       // EVENT HANDLER  FOR ONMOUSEOVER  FOR TARGET IMAGE
+		target.image.src = target.newImageURL;
+	}
 	
-	
-	
-	
-	
+	target.image.onmouseout = function() {
+		target.image.src = target.oldImageURL;
+	}
+}
+
+//  ----------------------------------------------------------------------------------------
+//  --------------------------------  STEP 13 EVENT HANDLER FUNCTION INSTANCES -------------
+//                   providing the image id and the image name to swap out for		
+console.log("\n\n----------  Part 3 STEP 13	  EVENT HANDLER FUNCTION INSTANCES -----------");	
+//  ----------------------------------------------------------------------------------------		
+ 	img1 = new Rollover("image1" ,"home_over.png");  	
+	img2 = new Rollover("image2" ,"aboutus_over.png"); 	
+	img3 = new Rollover("image3" ,"solutions_over.png"); 		
+	img4 = new Rollover("image4" ,"support_over.png");	
+	img5 = new Rollover("image5" ,"contactus_over.png");								 
+}
+
+
+/* ----------------          REMOVE THE NEXT LINE TO RUN THE PROGRAM  ------------- */
+
+*/
+
 </script>
 </head>
 
 <body>
+
+<!-- 
+//  ----------------------------------------------------------------------------------------
+//  --------------------------------  STEP 1  UNIQUE ID                       -------------	
+//  ---------------------------------------------------------------------------------------- 
+-->
 	<!-- 01 -->
-    <img src="home.png" id=image1>
-    <img src="aboutus.png"  id=image2>
-    <img src="solutions.png"  id=image3>
-    <img src="support.png" id=image4>
-    <img src="contactus.png" id=image5>
+   <div id="images">
+    <img src="home.png" id="image1" >
+    <img src="aboutus.png"  id="image2" >
+    <img src="solutions.png"  id="image3" >
+    <img src="support.png" id="image4" >
+    <img src="contactus.png" id="image5" >
+   </div>
 </body>
 </html>
+
